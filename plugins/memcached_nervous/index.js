@@ -53,7 +53,7 @@ module.exports = function( axon ) {
 	var on_connect = function () {
 	    client.stats( function( err, result ){
 
-		    if( err )  { axon.misfire( err ) };
+		    if( err )  { axon.emit( 'error',  err ) };
 		    
 
 		    //console.log( utils.inspect( result, true, null, true ) );
@@ -63,12 +63,12 @@ module.exports = function( axon ) {
 			var value = result[name];
 			var timestamp = result.time;
 			
-			axon.fire( name, value, timestamp );			
+			axon.emit( 'data', name, value, timestamp );			
 
 		    }
 
 		    //reset and then close the client
-		    debugger;
+		    //debugger;
 		    client.stats( 'reset', function( err ) {
 			    console.log(err);
 		        client.close();  
@@ -80,7 +80,7 @@ module.exports = function( axon ) {
 	
 	var on_error = function( err ) {
 		
-		axon.misfire( e );
+		axon.emit( 'error', e );
 	};
 	client.on( 'error', on_error ); 
 	
