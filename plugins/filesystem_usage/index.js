@@ -19,7 +19,7 @@ module.exports = function( axon ) {
     
         if ( matches && matches[1] ) {            
             capacity = matches[1];
-            axon.emit( 'data',  'capacity.' + filesystem_name, capacity );
+            axon.emit( 'data',  filesystem_name, capacity );
         }
         else {
             axon.emit( 'error', 'match failed' );                
