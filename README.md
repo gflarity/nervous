@@ -3,7 +3,7 @@
 
 ## Manifesto:
 
-Graphite does a good job storing and presenting time series data. But I've yet a satisfactory solution to the problem of gathering hardware, operating system and application data to feed Graphite. Collectd comes closest, but I feel that using C is overkill (these days) and more importantly creates a unecessary barrier to plugin development. 
+Graphite does a good job storing and presenting time series data. But I've yet to find satisfactory solution to the problem of gathering hardware, operating system and application data to feed Graphite. Collectd comes closest, but using C is uncessary overkill (these days) and more importantly creates a unecessary barrier to plugin development. 
 
 "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices."
 
