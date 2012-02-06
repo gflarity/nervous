@@ -27,7 +27,7 @@ Plugins get loaded during startup. Inside the plugin you define how data gets re
 
 1)
     cd plugins
-    npm link ../example_plugins/*
+    npm install ../example_plugins/*
     cd ../
     ./bin/nervous
 
