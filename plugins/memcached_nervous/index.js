@@ -73,9 +73,9 @@ module.exports = function( axon ) {
 	};
 	client.on( 'connect', on_connect );
 	
-	var on_error = function( err ) {
+	var on_error = function( error ) {
 		
-		axon.emit( 'error', e );
+		axon.emit( 'error', error);
 	};
 	client.on( 'error', on_error ); 
 	
