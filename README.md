@@ -1,4 +1,4 @@
-# Nervous - Monitoring doesn't have to suck.
+B# Nervous - Monitoring doesn't have to suck.
 
 
 ## Manifesto:
@@ -10,7 +10,7 @@ Graphite does a good job storing and presenting time series data. But I've yet t
 The ease with which plugins can be written in Node.js JavaScript is also advantage.  For these reasons I feel that Node.js is perfectly suited for writing a pluggable monitoring system.  Nervous is the embodiment of these beliefs, it is a simple plugin based monitoring system with support for sending data to Graphite (or Response). It follows the 'convention over configuration' and 'keep it simple shithead' ethea.
 
 Contributions in the form of code, plugins,  documentation, spreading the word, high fives are all encouraged. Specifically I could use help creating startup scripts, packaging manifests for different platforms etc. 
-
+83;40003;0c
 ## About Plugins: 
 
 Plugins are just regular Node.js libraries/modules that conformi to a certain convention to make them pluggable. They can be hosted on github and installed with NPM. Use your favourite configuration management system to install/deploy them. Configuration goes at the top of the plugin's index.js and should easily be templatable. They're expected to 'play nice' by not blocking the event loop, not overwhelming the system with events, and not tax the system's resources unecessarily. Some available plugins include cpu usage, filesystem size/usage,  memcached stats gathering. 
@@ -20,8 +20,19 @@ Plugins get loaded during startup. Inside the plugin you define how data gets re
 
 ## Quick Start:
 
-Under construction. Soon there will be make install support. I'm considering including optional support for forever. 
 
+0) To test a plugin without graphite, run 'node test.js plugin_dir' from the plugins directory.
+
+1) Install graphite
+
+2) Modify the configuration at the top of nervous.js to reflect
+
+3) You'll probably want to move the memcached plugin directory (unless you have memcached installed ). This is there as a demo and because I need it. 
+node nervous.js
+
+4) 'node nervous.js'
+
+Note this is under construction. Soon there will be make install support. I'm considering including optional support for forever. 
 
 ## Where to find plugins:
 
