@@ -1,5 +1,8 @@
-B# Nervous - Monitoring doesn't have to suck.
+# Nervous - Monitoring doesn't have to suck.
 
+## Note to #monitoringsucks people
+
+I can't really participate in your hackathon, but I rushed to get something working and put it out there. THere's still a lot more work necessary and  I really want to create a community around this.
 
 ## Manifesto:
 
