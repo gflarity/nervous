@@ -1,9 +1,5 @@
 # Nervous - Monitoring doesn't have to suck.
 
-## Note to #monitoringsucks people
-
-I can't really participate in your hackathon, but I rushed to get something working and put it out there. THere's still a lot more work necessary and  I really want to create a community around this. Please take a look at the open issues to get a sense of where things are heading.
-
 ## Manifesto:
 
 Graphite does a good job storing and presenting time series data. But I've yet to find satisfactory solution to the problem of gathering hardware, operating system and application data to feed Graphite. Collectd comes closest, but using C is uncessary overkill (these days) and more importantly creates a unecessary barrier to plugin development. 
@@ -23,14 +19,13 @@ Plugins get loaded during startup. Inside the plugin you define how data gets re
 
 ## Quick Start:
 
-0) Install Graphite, edit the config in ./bin/nervous file, if you don't have graphite then change system_type to 'stdout' instead.
-
-1)
+1. Install/setup Graphite (optional)
+1. edit the config in ./bin/nervous file, if you don't have graphite then change system_type to 'stdout' instead.
+1.
     cd plugins
     npm install ../example_plugins/*
     cd ../
     ./bin/nervous
-
 
 Note this is under construction. Soon there will be make install support. I'm considering including optional support for forever. 
 
