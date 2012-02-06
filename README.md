@@ -25,10 +25,10 @@ Plugins get loaded during startup. Inside the plugin you define how data gets re
 
 3) start nervous up
 
-    cd plugins
-    npm install ../example_plugins/*
-    cd ../
-    ./bin/nervous
+   	 cd plugins
+	 npm install ../example_plugins/*
+	 cd ../
+	 ./bin/nervous
 
 Note this is under construction. Soon there will be make install support. I'm considering including optional support for forever. 
 
