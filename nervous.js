@@ -22,7 +22,7 @@ var load_plugins = function () {
 		    var plugin_path = plugin_dir + '/' + entry;
 		    fs.stat( plugin_path, function( err, stats ) {
 			    if ( stats.isDirectory() ) {
-				require( plugin_path )( AxonFactory( entry ) );
+				require( plugin_path )( axon_factory( entry ) );
 			    }
 			} );	
 	    } );
