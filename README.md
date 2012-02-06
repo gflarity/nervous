@@ -2,7 +2,7 @@
 
 ## Note to #monitoringsucks people
 
-I can't really participate in your hackathon, but I rushed to get something working and put it out there. THere's still a lot more work necessary and  I really want to create a community around this.
+I can't really participate in your hackathon, but I rushed to get something working and put it out there. THere's still a lot more work necessary and  I really want to create a community around this. Please take a look at the open issues to get a sense of where things are heading.
 
 ## Manifesto:
 
