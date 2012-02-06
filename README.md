@@ -23,7 +23,8 @@ Plugins get loaded during startup. Inside the plugin you define how data gets re
 
 2) edit the config in ./bin/nervous file, if you don't have graphite then change system_type to 'stdout' instead.
 
-3)
+3) start nervous up
+
     cd plugins
     npm install ../example_plugins/*
     cd ../
