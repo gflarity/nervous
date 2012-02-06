@@ -10,7 +10,7 @@ var config = {
 
 //deps
 var fs = require('fs');
-var axon_factory = require('axon_factory')( system_type, config );
+var axon_factory = require('./lib/axon_factory')( system_type, config );
 
 //code
 
