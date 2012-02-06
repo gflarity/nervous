@@ -55,25 +55,20 @@ module.exports = function( axon ) {
 
 		    if( err )  { axon.emit( 'error',  err ) };
 		    
-
-		    //console.log( utils.inspect( result, true, null, true ) );
-		    for ( var i = 0; i < stats_to_gather.length; i++ ) {
-			
-			var name = stats_to_gather[i];
-			var value = result[name];
-			var timestamp = result.time;
-			
-			axon.emit( 'data', name, value, timestamp );			
-
-		    }
-
-		    //reset and then close the client
-		    //debugger;
-		    client.stats( 'reset', function( err ) {
-			    console.log(err);
-		        client.close();  
-		    } );
-		});
+            //console.log( utils.inspect( result, true, null, true ) );
+            for (var i = 0; i < stats_to_gather.length; i++) {
+                var name = stats_to_gather[i];
+                var value = result[name];
+                var timestamp = result.time;
+                axon.emit('data', name, value, timestamp);
+            }
+            //reset and then close the client
+            //debugger;
+            client.stats('reset', function(err) {
+                console.log(err);
+                client.close();
+            });
+        });
 
 	};
 	client.on( 'connect', on_connect );
