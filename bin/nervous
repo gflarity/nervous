@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 //config
-var plugin_dir = './plugins';
+var plugins_home = '../plugins';
 
 var system_type = 'graphite';
 var config = {
@@ -10,19 +12,23 @@ var config = {
 
 //deps
 var fs = require('fs');
-var axon_factory = require('./lib/axon_factory')( system_type, config );
+var axon_factory = require('../lib/axon_factory')( system_type, config );
+var path = require('path');
 
 //code
+var full_path_of_test_js =  require.resolve( plugins_home + '/test.js' );
+var full_plugins_path = path.dirname( full_path_of_test_js ) + '/node_modules';
 
 var load_plugins = function () {
-    fs.readdir( plugin_dir, function( err, entries ) {
+    fs.readdir( full_plugins_path, function( err, entries ) {
 	    var dirs = [];
+	    entries = entries || [];
 	    entries.forEach( function( entry ) {
 		    
-		    var plugin_path = plugin_dir + '/' + entry;
-		    fs.stat( plugin_path, function( err, stats ) {
+		    var plugin = full_plugins_path + '/' + entry;
+		    fs.stat( plugin, function( err, stats ) {
 			    if ( stats.isDirectory() ) {
-				require( plugin_path )( axon_factory( entry ) );
+				require( plugin )( axon_factory( entry ) );
 			    }
 			} );	
 	    } );
