@@ -60,14 +60,16 @@ module.exports = function( axon ) {
                 var name = stats_to_gather[i];
                 var value = result[name];
                 var timestamp = result.time;
+                
+                
                 axon.emit('data', name, value, timestamp);
             }
-            //reset and then close the client
-            //debugger;
-            client.stats('reset', function(err) {
+            //TODO reset and then close the client, the client doesn't support
+            //reset, need to patch it first            
+            /*client.stats('reset', function(err) {
                 console.log(err);
                 client.close();
-            });
+            });*/
         });
 
 	};
