@@ -1,6 +1,6 @@
 {
   "name": "nervous",
-  "preferGlobal": "false",
+  "preferGlobal": false,
   "version": "0.1.0",
   "author": "Geoff Flarity <geoff.flarity@gmail.com>",
   "description": "a simple plug-in based monitoring system",
