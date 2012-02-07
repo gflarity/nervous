@@ -6,7 +6,11 @@ Graphite does a good job storing and presenting time series data. But I've yet t
 
 "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices."
 
-The ease with which plugins can be written in Node.js JavaScript is also advantage.  For these reasons I feel that Node.js is perfectly suited for writing a pluggable monitoring system.  Nervous is the embodiment of these beliefs, it is a simple plugin based monitoring system with support for sending data to Graphite (or Response). It follows the 'convention over configuration' and 'keep it simple shithead' ethea.
+The ease with which plugins can be written in Node.js JavaScript is also advantage.  For these reasons I feel that Node.js is perfectly suited for writing a pluggable monitoring system.  
+
+# About Nervous
+
+Nervous is the embodiment of these beliefs above. It is a simple plugin based monitoring system with support for sending data to Graphite (or Response). It follows the 'convention over configuration' and 'keep it simple shithead' ethea.
 
 Contributions in the form of code, plugins,  documentation, spreading the word, high fives are all encouraged. Specifically I could use help creating startup scripts, packaging manifests for different platforms etc. 
 
