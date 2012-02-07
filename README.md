@@ -2,7 +2,7 @@
 
 # Manifesto:
 
-Graphite does a good job storing and presenting time series data. But I've yet to find satisfactory solution to the problem of gathering hardware, operating system and application data to feed Graphite. Collectd comes closest, but using C is uncessary overkill (these days) and more importantly creates a unecessary barrier to plugin development. 
+Graphite does a good job storing and presenting time series data. But I've yet to find satisfactory solution to the problem of *easily* gathering arbitrary hardware, operating system and application data to feed Graphite. Collectd comes closest, it has facilities for writting plugins in Perl, Python and Java. That's great but I had difficulty compiling the Perl plugin and interfaces seems needlessly complex. That said, for those chases where collectd already has a plugin satisfying your needs it's great. Nervous tries to provide a framework for easily creating your own custom monitoring plugins. These plugins are written in JavaScript and chances are good that you already know a little. But most importantly, Nervous tries to this and only this very well. 
 
 "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices."
 
