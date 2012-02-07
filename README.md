@@ -10,7 +10,7 @@ The ease with which plugins can be written in Node.js JavaScript is also advanta
 
 # About Nervous
 
-Nervous is the embodiment of the beliefs above. It is a simple plugin based monitoring system with support for sending data to Graphite or [Response](https://github.com/gflarity/nervous). It follows the 'convention over configuration' and 'keep it simple shithead' ethea.
+Nervous is the embodiment of the beliefs above. It is a simple plugin based monitoring system with support for sending data to Graphite or [Response](https://github.com/gflarity/response). It follows the 'convention over configuration' and 'keep it simple shithead' ethea.
 
 Contributions in the form of code, plugins, documentation, spreading the word, high fives are all encouraged. Specifically I could use help creating startup scripts, packaging manifests for different platforms etc. 
 
