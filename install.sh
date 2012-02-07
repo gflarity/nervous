@@ -1,9 +1,21 @@
-install: 
-	/bin/mkdir -p /opt/nervous/bin
-	/bin/mkdir -p /opt/nervous/log
-	/bin/mkdir -p /opt/nervous/lib
-	/bin/mkdir -p /opt/nervous/plugins/node_modules
-	/usr/bin/install -m 0755 -t /opt/nervous/bin bin/nervous	
-	/usr/bin/install -m 0644 -t /opt/nervous/lib lib/*
+set -e
 
+UNAME=`uname`;
+INSTALL='install'
+if [ $UNAME = 'Darwin' ]; then
+    if which -s ginstall; then 
+	INSTALL='ginstall'
+    else 
+	echo "Hi Mac user, please install coreutils via brew"
+    fi
+fi
 
+DEFAULT_PREFIX=/opt
+PREFIX=${PREFIX:-$DEFAULT_PREFIX}
+
+/bin/mkdir -p $PREFIX/nervous/bin
+/bin/mkdir -p $PREFIX/nervous/log
+/bin/mkdir -p $PREFIX/nervous/lib
+/bin/mkdir -p $PREFIX/nervous/plugins/node_modules
+$INSTALL -m 0755 -t $PREFIX/nervous/bin bin/nervous	
+$INSTALL -m 0644 -t $PREFIX/nervous/lib lib/*js
