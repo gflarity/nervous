@@ -1,0 +1,13 @@
+Source: nodejs-streamlogger
+Section: misc
+Priority: extra
+Uploaders: Wade Simmons <wade@simplegeo.com>
+Maintainer: SimpleGeo Nerds <nerds@simplegeo.com>
+build-Depends: cdbs, debhelper (>= 7)
+Standards-Version: 3.9.1
+
+Package: nodejs-streamlogger
+Depends: nodejs (>= 0.2.3), ${misc:Depends}
+Architecture: all
+Description: node-streamlogger
+ http://github.com/andrewvc/node-streamlogger
