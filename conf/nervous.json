@@ -1,0 +1,6 @@
+{
+    "system_type" : "graphite",
+    "graphite_host" : "stats01-smc03",
+    "graphite_port" : "2003",
+    "graphite_namespace" : "nervous.www02-smc03"
+}
