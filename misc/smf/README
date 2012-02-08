@@ -1,0 +1,1 @@
+This is smf manifest for Illumos/SmartOS, install it with 'svccfg import nervous.xml'.
