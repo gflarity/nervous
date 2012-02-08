@@ -15,10 +15,11 @@ PREFIX=${PREFIX:-$DEFAULT_PREFIX}
 
 /bin/mkdir -p $PREFIX/nervous/bin
 /bin/mkdir -p $PREFIX/nervous/log
-/bin/mkdir -p $PREFIX/nervous/lib
+/bin/mkdir -p $PREFIX/nervous/lib/node_modules
 /bin/mkdir -p $PREFIX/nervous/conf
 /bin/mkdir -p $PREFIX/nervous/plugins/node_modules
 $INSTALL -m 0755 -t $PREFIX/nervous/bin bin/nervous	
 $INSTALL -m 0644 -t $PREFIX/nervous/plugins plugins/test.js
 $INSTALL -m 0644 conf/nervous.json $PREFIX/nervous/conf/nervous.json.example
 $INSTALL -m 0644 -t $PREFIX/nervous/lib lib/*js
+cp -r lib/node_modules/* $PREFIX/nervous/lib/node_modules/
