@@ -1,7 +1,7 @@
 {
   "name": "nervous",
   "preferGlobal": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Geoff Flarity <geoff.flarity@gmail.com>",
   "description": "a simple plug-in based monitoring system",
   "contributors": [ 
