@@ -1,0 +1,12 @@
+#! /bin/bash                                                                                                                                                                                               set -e
+NERVOUS=/opt/nervous/bin/nervous
+case "$1" in
+start) forever start $NERVOUS ;;
+stop) forever stop $NERVOUS ;;
+force-reload|restart)
+forever restart $NERVOUS ;;
+status) forever list | grep $NERVOUS ;;
+*) echo "Usage: /etc/init.d/nervous {start|stop|restart|force-reload}"
+exit 1 ;;
+esac
+exit 0
