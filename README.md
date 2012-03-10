@@ -24,17 +24,17 @@ Contributions in the form of code, plugins, documentation, spreading the word, h
 
 4a) On linux you can install 'forvever' and copy the init.d script into place:
 
-`
+```
 sudo npm install forever -g
 sudo cp misc/init.d/nervous /etc/init.d/
 sudo service nervous start
-`
+```
 
 4b) On SmartOS or other illumos systems you can use the included SMF manifest:
 
-`
+```
 sudo svccfg import misc/smf/nervous.xml
-`
+```
 
 ## Where to find plugins:
 
@@ -45,7 +45,7 @@ Search search.npmjs.org for nervous. Plugins conform to the naming convention 'n
 
 Please take a look the included examples as well as those plugins available through npm. It's really easy:
 
-`
+```
 //this oneliner loads the config.json in the plugin root dir
 var config = JSON.parse( fs.readFileSync( require.resolve('./config.json') ) );
 
@@ -58,14 +58,16 @@ module.exports = function( axon ) {
 	//or:
 	axon.emit( 'data', name, value, timestamp );
 };
-`
+```
 
 
 ## How to test plugins:
 
 Check out the test.js script inside the plugins directory. It takes a plugin name as a argument and then loads the plugin just like nervous would, only data just gets printed to stdout. Example:
 
-`node test filesystem_usage`
+```
+node test filesystem_usage
+```
 
 ## About Plugins: 
 
