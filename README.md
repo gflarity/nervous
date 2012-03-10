@@ -45,8 +45,8 @@ Search search.npmjs.org for nervous. Plugins conform to the naming convention 'n
 
 Please take a look the included examples as well as those plugins available through npm. It's really easy:
 
-
-`//this oneliner loads the config.json in the plugin root dir
+`
+//this oneliner loads the config.json in the plugin root dir
 var config = JSON.parse( fs.readFileSync( require.resolve('./config.json') ) );
 
 //export a single function, it gets an event emitter which you send out graphite data on as you like
@@ -57,7 +57,8 @@ module.exports = function( axon ) {
 
 	//or:
 	axon.emit( 'data', name, value, timestamp );
-};`
+};
+`
 
 
 ## How to test plugins:
