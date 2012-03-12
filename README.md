@@ -22,7 +22,7 @@ Contributions in the form of code, plugins, documentation, spreading the word, h
 	 cd ../
 	 ./bin/nervous
 
-4a) On linux you can install 'forvever' and copy the init.d script into place:
+4a) On linux you can install 'forever' and copy the init.d script into place:
 
 ```
 sudo npm install forever -g
